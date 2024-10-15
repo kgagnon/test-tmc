@@ -11,8 +11,4 @@ class User
     @active_status = active_status
     @tokens = tokens
   end
-
-  def update_tokens(top_up)
-    @tokens += top_up
-  end
 end
