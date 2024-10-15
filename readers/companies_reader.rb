@@ -1,4 +1,4 @@
-require_relative 'json_reader'
+require_relative "json_reader"
 
 class CompaniesReader < JsonReader
   attr_reader :companies
