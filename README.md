@@ -13,7 +13,7 @@ This project is a Ruby application designed to read, process, and output user an
 2. Place your input JSON files in the `data` folder. The files should be named:
    - `companies.json`
    - `users.json`
-3. Run the application by executing the following command in your terminal:
+3. Run the application by executing the following command, at the project root folder, in your terminal:
 
    ```bash
    ruby challenge.rb
