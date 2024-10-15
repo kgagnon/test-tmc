@@ -24,7 +24,7 @@ sorted_companies.each do |company|
   total_top_up = 0
 
   user_reader.users.each do |user|
-    next if user.company_id != company.id
+    next if user.company_id != company.id || !user.active_status
 
     new_balance = user.tokens + company.top_up
     total_top_up += company.top_up
@@ -35,6 +35,8 @@ sorted_companies.each do |company|
       users_not_emailed << { name: "#{user.last_name}, #{user.first_name}", email: user.email, previous_balance: user.tokens, new_balance: new_balance }
     end
     # In the real world here we would save user tokens and company total, maybe?
+    # In the real world, parsing data and updating objects wouldn't be done in main.rb either
+    # ¯\_(ツ)_/¯
   end
 
   sort_by_last_name(users_emailed)
